@@ -5,6 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './book.css';
 import * as Yup from 'yup';
 import { Link } from 'react-router-dom';
+import banner from '../assets/banner.png';
 const validationSchema = Yup.object().shape({
   firstName: Yup.string().required('First name is required'),
   lastName: Yup.string().required('Last name is required'),
@@ -32,7 +33,7 @@ const Book = () => {
   return (
     <Container className='ccontainer container-fluid'>
       <div className="header">
-        <img src="./src/assets/banner.png" alt="Hotel Paradise" className="header-image mb-5" height={300} />
+        <img src={banner} alt="Hotel Paradise" className="header-image mb-5" height={300} />
         <h1 className="header-text">LuxuryStay Hospitality</h1>
       </div>
       <Formik

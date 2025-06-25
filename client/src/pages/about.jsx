@@ -30,8 +30,8 @@ function About() {
                             className="text-dark px-5">Learn More</a>
                     </div>
                     <div className='col-md-6'>
-                        <img src="src/assets/sec-img1.png" />
-                        <img src="src/assets/sec-img2.png" className="mt-5 mx-3" />
+                        <img src={sec5Img1} />
+                        <img src={sec5Img2} className="mt-5 mx-3" />
                     </div>
                 </div>
             </div>

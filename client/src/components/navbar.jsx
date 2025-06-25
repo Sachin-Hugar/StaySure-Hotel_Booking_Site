@@ -4,6 +4,7 @@ import './navbar.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import { Link, NavLink } from 'react-router-dom';
 import { getSession, isSessionValid,logout} from '../utils/Session';
+import logo from '../assets/logo.png';
 
 function Navbar({ centerText, backgroundImage }) {
   const isLoggedIn = isSessionValid();
@@ -74,7 +75,7 @@ function Navbar({ centerText, backgroundImage }) {
 
               {/* Centered Logo */}
               <Link className="navbar-brand mx-auto" to="/">
-                <img src="src/assets/logo.png" alt="Logo" className="logo-sm" />
+                <img src={logo} alt="Logo" className="logo-sm" />
               </Link>
 
               {/* Links on the right */}
