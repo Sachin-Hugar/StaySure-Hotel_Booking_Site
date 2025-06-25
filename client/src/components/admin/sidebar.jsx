@@ -3,7 +3,8 @@ import { Link } from 'react-router-dom';
 import { Container, Row, Col, Card, Nav, Table, Button } from 'react-bootstrap';
 import { MdDashboard, MdCalendarToday, MdMenu } from 'react-icons/md';
 import { FaUserFriends, FaUserShield, FaBed, FaMoneyBillWave } from 'react-icons/fa';
-import logo from '../assets/logo.png';
+import logo from '../../assets/logo.png';
+
 
 const Sidebar = () => {
   const [collapsed, setCollapsed] = useState(false);
