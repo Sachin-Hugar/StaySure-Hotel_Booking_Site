@@ -21,7 +21,7 @@ const RoomDetailsPage = () => {
       { site: 'booking.com', price: 'USD 964', nights: '3 Nights' },
       { site: 'HotelStore', price: 'USD 872', discount: 'Spa $75 discount', nights: '3 Nights' },
     ],
-    image: {about_banner}, 
+    image:about_banner, 
   };
 
   return (
