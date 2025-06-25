@@ -2,6 +2,7 @@ import React from 'react';
 import { Container, Row, Col, Card, ListGroup } from 'react-bootstrap';
 import './login.css';
 import { Link } from 'react-router-dom';
+import about_banner from '../assets/about_banner.png';
 
 const RoomDetailsPage = () => {
   const room = {
@@ -20,7 +21,7 @@ const RoomDetailsPage = () => {
       { site: 'booking.com', price: 'USD 964', nights: '3 Nights' },
       { site: 'HotelStore', price: 'USD 872', discount: 'Spa $75 discount', nights: '3 Nights' },
     ],
-    image: './src/assets/about_banner.png', 
+    image: {about_banner}, 
   };
 
   return (

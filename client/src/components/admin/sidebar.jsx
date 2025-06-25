@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Container, Row, Col, Card, Nav, Table, Button } from 'react-bootstrap';
 import { MdDashboard, MdCalendarToday, MdMenu } from 'react-icons/md';
 import { FaUserFriends, FaUserShield, FaBed, FaMoneyBillWave } from 'react-icons/fa';
+import logo from '../assets/logo.png';
 
 const Sidebar = () => {
   const [collapsed, setCollapsed] = useState(false);
@@ -29,7 +30,7 @@ const Sidebar = () => {
       </Button>
       {!collapsed && (
         <div className="d-flex align-items-center mb-4">
-          <img src="../../src/assets/logo.png" alt="logo" height={60} />
+          <img src={logo} alt="logo" height={60} />
           <h3 className="text-center mt-3" style={{ fontSize: '1.5rem' }}>
             Luxury Stay
           </h3>

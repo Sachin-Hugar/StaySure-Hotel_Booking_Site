@@ -5,6 +5,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import { Container, Row, Col, Card, Button, Modal, Image} from 'react-bootstrap';
 import './home.css';
+import sec2Img1 from '../assets/sec2-img1.png';
+import sec2Img2 from '../assets/sec2-img2.png';
+import sec2Img3 from '../assets/sec2-img3.png';
 import sec4Img1 from '../assets/sec4Img1.png';
 import sec4Img2 from '../assets/sec4Img2.png';
 import sec4Img3 from '../assets/sec4Img3.png';
@@ -38,7 +41,7 @@ return(
         <Row className='my-5'>
           <Col md={4} className="mb-4 my-2">
             <Card className="offer-card">
-              <Card.Img variant="top" src="src/assets/sec2-img1.png" alt="Sea view at night" />
+              <Card.Img variant="top" src={sec2Img1} alt="Sea view at night" />
               <Card.Body>
                 <Card.Title>Up to 35% savings on Club rooms and Suites</Card.Title>
                 <Card.Text>
@@ -54,7 +57,7 @@ return(
           </Col>
           <Col md={4} className="mb-4 my-2">
             <Card className="offer-card">
-              <Card.Img variant="top" src="src/assets/sec2-img2.png" alt="Balcony with sea view" />
+              <Card.Img variant="top" src={sec2Img2} alt="Balcony with sea view" />
               <Card.Body>
                 <Card.Title>Up to 35% savings on Club rooms and Suites</Card.Title>
                 <Card.Text>
@@ -70,7 +73,7 @@ return(
           </Col>
           <Col md={4} className="mb-4 my-2">
             <Card className="offer-card">
-              <Card.Img variant="top" src="src/assets/sec2-img3.png" alt="Mountain view with sea" />
+              <Card.Img variant="top" src={sec2Img3} alt="Mountain view with sea" />
               <Card.Body>
                 <Card.Title>Up to 35% savings on Club rooms and Suites</Card.Title>
                 <Card.Text>
