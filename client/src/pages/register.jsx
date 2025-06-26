@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './register.css';
 import { Link, useNavigate } from 'react-router-dom';
 import logo from '../assets/logo.png';
-import axios from 'axios';
+import api from '../utils/api';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { validationSchema } from '../ValidationSchema/RegisterValSchema';
@@ -32,7 +32,7 @@ function Register() {
 
     const onSubmit = async (data) => {
         try {
-            const response = await axios.post('http://localhost:3000/api/auth/register', {
+            const response = await api.post('/auth/register', {
                 name: data.name,
                 email: data.email,
                 password: data.password,

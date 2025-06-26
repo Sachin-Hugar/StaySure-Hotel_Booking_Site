@@ -5,9 +5,11 @@ import './login.css';
 import logo from '../assets/logo.png';
 import { Link ,useNavigate} from "react-router-dom";
 import { Formik, Form, Field, ErrorMessage } from 'formik';
-import axios from 'axios';
+
 import * as Yup from 'yup';
 import { saveSession, getSession, isSessionExpired } from '../utils/Session';
+import api from '../utils/api';
+
 
 // Validation schema
 const validationSchema = Yup.object({
@@ -32,7 +34,7 @@ function Login() {
     }, [navigate]);
     const handleSubmit = async (values, { setSubmitting, setErrors }) => {
         try {
-            const response = await axios.post('http://localhost:3000/api/auth/login', values);
+            const response = await api.post('/auth/login', values);
             
             console.log(response.data); // Handle success, e.g., redirect to home or store token
             saveSession(response.data.token); // Save token using session utility

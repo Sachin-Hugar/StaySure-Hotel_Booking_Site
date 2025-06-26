@@ -23,7 +23,7 @@ import sec5Img5 from '../assets/sec5Img5.png';
 import Footer from '../components/footer';
 import Navbar from '../components/navbar';
 import { Link } from 'react-router-dom';
-import axios from 'axios';
+import api from '../utils/api';
 
 function Home() {
   const [show, setShow] = useState(false);
@@ -33,7 +33,7 @@ function Home() {
     // Fetch room types from API
     const fetchRoomTypes = async () => {
       try {
-        const response = await axios.get('http://localhost:3000/api/roomType');
+        const response = await api.get('/roomType');
         setRoomTypes(response.data);
       } catch (error) {
         console.error('Error fetching room types:', error);
@@ -193,7 +193,8 @@ function Home() {
         <Row>
         {roomTypes.map((room) => (
             <Col key={room._id} md={6} className="p-0 sec4">
-              <RoomCard imgSrc={`http://localhost:3000/uploads/${room.image}`} title={room.name} price={room.price || '250'} />
+              <RoomCard imgSrc={`${import.meta.env.VITE_API_BASE_URL}/uploads/${room.image}`} title={room.name} price={room.price || '250'} />
+
             </Col>
           ))}
         </Row>
